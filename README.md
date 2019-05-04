@@ -1,5 +1,7 @@
 # confluent-kafka-certification
-This repos is to keep all the relevant informations for confluent-kafka-certification
+This repos is to keep all the relevant informations related for confluent-kafka-certification.
+
+Note: This is work in progress, it will be improved overtime. 
 
 # Tutorials
 * https://www.confluent.io/stream-processing-cookbook/
