@@ -3,7 +3,7 @@ This repos is to keep all the relevant informations related for confluent-kafka-
 
 Note: This is work in progress, it will be improved overtime. 
 
-# Links:
+# Useful Links: #
 * https://www.confluent.io/stream-processing-cookbook/
 * https://docs.confluent.io/current/ksql/docs/faq.html
 * https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf
@@ -49,5 +49,3 @@ Note: This is work in progress, it will be improved overtime.
 [README.md](kafka-schema-registry/README.md)
 # Kafka KSQL
 [README.md](kafka-ksql/README.md)
-## Video tutorials:
-https://www.youtube.com/watch?v=ExEWJVjj-RA&list=PLa7VYi0yPIH2eX8q3mPpZAn3qCS1eDX8W
