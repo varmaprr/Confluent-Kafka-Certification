@@ -1,4 +1,4 @@
-# Confluent certified Daeveloper for Apache Kafka (CCDAK)
+# Confluent Certified Developer for Apache Kafka (CCDAK)
 
 This repos is to keep all the relevant informations related for confluent-kafka-certification (CCDAK).
 
