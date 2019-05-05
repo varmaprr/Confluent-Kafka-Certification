@@ -5,8 +5,13 @@ This repos is to keep all the relevant informations related for confluent-kafka-
 Note: This is work in progress, it will be improved overtime. 
 
 ## How to install kafka in AWS ##
-
-//TO-DO
+* Create an ec2 instance
+* install git
+* install docker
+* install docker-compose
+* git clone https://github.com/varmaprr/confluent-kafka-certification.git
+* cd kafka-docker 
+* docker-compose up -d --build
 
 ## Useful Links: ##
 * Kafka-connectors https://www.baeldung.com/kafka-connectors-guide
