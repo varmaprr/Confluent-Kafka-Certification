@@ -21,7 +21,6 @@ Note: This is work in progress, it will be improved overtime.
 
 
 # Video tutorials:
-* https://www.youtube.com/playlist?list=PLa7VYi0yPIH2eX8q3mPpZAn3qCS1eDX8W
 * https://www.youtube.com/playlist?list=PLt1SIbA8guutTlfh0J7bGboW_Iplm6O_B
 * https://youtu.be/Z3JKCLG3VP4
 * https://youtu.be/-y2ALVkU5Bc
