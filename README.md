@@ -3,7 +3,7 @@ This repos is to keep all the relevant informations related for confluent-kafka-
 
 Note: This is work in progress, it will be improved overtime. 
 
-# Tutorials
+# Links:
 * https://www.confluent.io/stream-processing-cookbook/
 * https://docs.confluent.io/current/ksql/docs/faq.html
 * https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf
@@ -39,6 +39,7 @@ Note: This is work in progress, it will be improved overtime.
 * https://youtu.be/_6HTHH1NCK0
 
 # Kafka producer
+[a link]kafka-producer/README.md
 # Kafka consummer
 # Kakfa Streams
 # Kakfa Connectors
