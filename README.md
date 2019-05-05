@@ -3,7 +3,9 @@ This repos is to keep all the relevant informations related for confluent-kafka-
 
 Note: This is work in progress, it will be improved overtime. 
 
-# Useful Links: #
+## setup How to install kafka in AWS
+
+## Useful Links: ##
 * Kafka-connectors https://www.baeldung.com/kafka-connectors-guide
 * Kafka-connect https://data-flair.training/blogs/kafka-connect/amp/
 * Kafka-connect-avro https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html
@@ -19,7 +21,7 @@ Note: This is work in progress, it will be improved overtime.
 * schema registry https://docs.confluent.io/current/schema-registry/schema_registry_tutorial.html
 * Kafka-control-center https://docs.confluent.io/current/tutorials/cp-demo/docs/index.html
 
-# Video tutorials:
+## Video tutorials: ##
 * KSQL https://www.youtube.com/watch?v=ExEWJVjj-RA&list=PLa7VYi0yPIH2eX8q3mPpZAn3qCS1eDX8W
 * Kafka-connect https://www.youtube.com/playlist?list=PLt1SIbA8guutTlfh0J7bGboW_Iplm6O_B
 * kafka-streams explained by Neha https://www.youtube.com/watch?v=A9KQufewd-s&feature=youtu.be
@@ -37,22 +39,22 @@ Note: This is work in progress, it will be improved overtime.
 * Avro: schema evolution - By Stephane Maarek - https://youtu.be/SZX9DM_gyOE
 * Avro producer - By Stephane Maarek https://youtu.be/_6HTHH1NCK0
 
-# Kafka producer
+## Kafka producer ##
 [README.md](kafka-producer/README.md)
-# Kafka consummer
+## Kafka consummer ##
 [README.md](kafka-consumer/README.md)
-# Kakfa Connectors
+## Kakfa Connectors ##
 [README.md](kafka-connectors/README.md)
-# Kakfa schema-registry
+## Kakfa schema-registry ##
 [README.md](kafka-schema-registry/README.md)
-# Kakfa Streams
+## Kakfa Streams ##
 [README.md](kafka-streams/README.md)
-# Kafka KSQL
+## Kafka KSQL ##
 [README.md](kafka-ksql/README.md)
-# Kafka-DSL
+## Kafka-DSL ##
 
-# Kafka-docker
+## Kafka-docker ##
 
-# Kafka-control-center
+## Kafka-control-center ##
 
-# Kafka-security
+## Kafka-security ##
