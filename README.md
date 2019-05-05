@@ -4,7 +4,7 @@ This repos is to keep all the relevant informations related for confluent-kafka-
 
 Note: This is work in progress, it will be improved overtime. 
 
-## How to install kafka in AWS ##
+## How to run confluent kafka in AWS ##
 * Create an ec2 instance
 * install git
 * install docker
