@@ -39,9 +39,14 @@ Note: This is work in progress, it will be improved overtime.
 * https://youtu.be/_6HTHH1NCK0
 
 # Kafka producer
-[a link]kafka-producer/README.md
+[a link](kafka-producer/README.md)
 # Kafka consummer
+[a link](kafka-consumer/README.md)
 # Kakfa Streams
+[a link](kafka-streams/README.md)
 # Kakfa Connectors
+[a link](kafka-connectors/README.md)
 # Kakfa schema-registry
+[a link](kafka-schema-registry/README.md)
 # Kafka KSQL
+[a link](kafka-ksql/README.md)
