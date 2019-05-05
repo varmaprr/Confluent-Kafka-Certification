@@ -4,21 +4,20 @@ This repos is to keep all the relevant informations related for confluent-kafka-
 Note: This is work in progress, it will be improved overtime. 
 
 # Useful Links: #
-* https://www.confluent.io/stream-processing-cookbook/
-* https://docs.confluent.io/current/ksql/docs/faq.html
-* https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf
-* https://docs.confluent.io/current/kafka-rest/index.html
-* https://docs.confluent.io/current/schema-registry/schema_registry_tutorial.html
-* https://docs.confluent.io/current/kafka-rest/docs/index.html
+* Kafka-streams https://www.confluent.io/stream-processing-cookbook/
+* KSQL https://docs.confluent.io/current/ksql/docs/faq.html
+* Kafka Security https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf
+* Kafka-rest https://docs.confluent.io/current/kafka-rest/index.html
+* kafka-rest https://docs.confluent.io/current/kafka-rest/docs/index.html
+* kafka-rest https://docs.confluent.io/current/kafka-rest/quickstart.html
+* schema registry https://docs.confluent.io/current/schema-registry/schema_registry_tutorial.html
 * https://docs.confluent.io/current/tutorials/cp-demo/docs/index.html
-* https://docs.confluent.io/current/kafka-rest/quickstart.html
-* https://docs.confluent.io/current/streams/index.html
-* https://www.baeldung.com/kafka-connectors-guide
-* https://data-flair.training/blogs/kafka-connect/amp/
-* https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html
-* https://www.confluent.io/blog/simplest-useful-kafka-connect-data-pipeline-world-thereabouts-part-1/
-* https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html
-
+* Kafka-streams https://docs.confluent.io/current/streams/index.html
+* Kafka-connectors https://www.baeldung.com/kafka-connectors-guide
+* Kafka-connect https://data-flair.training/blogs/kafka-connect/amp/
+* Kafka-connect-avro https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html
+* kafka-connect https://www.confluent.io/blog/simplest-useful-kafka-connect-data-pipeline-world-thereabouts-part-1/
+* kafka-connect https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html
 
 # Video tutorials:
 * KSQL https://www.youtube.com/watch?v=ExEWJVjj-RA&list=PLa7VYi0yPIH2eX8q3mPpZAn3qCS1eDX8W
