@@ -38,3 +38,9 @@ Note: This is work in progress, it will be improved overtime.
 * https://youtu.be/SZX9DM_gyOE
 * https://youtu.be/_6HTHH1NCK0
 
+#kafka producer
+#kafka consummer
+#Kakfa Streams
+#Kakfa Connectors
+#Kakfa schema-registry
+#kafka KSQL
