@@ -1,4 +1,4 @@
-# confluent-kafka-certification
+# confluent-kafka-certification (CCDAK)
 This repos is to keep all the relevant informations related for confluent-kafka-certification (CCDAK).
 
 Note: This is work in progress, it will be improved overtime. 
@@ -49,10 +49,10 @@ Note: This is work in progress, it will be improved overtime.
 [README.md](kafka-streams/README.md)
 # Kafka KSQL
 [README.md](kafka-ksql/README.md)
-#kafka-DSL
+# Kafka-DSL
 
-#kafka-docker
+# Kafka-docker
 
-#Kafka-control-center
+# Kafka-control-center
 
-#kafka-security
+# Kafka-security
