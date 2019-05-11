@@ -13,6 +13,16 @@ Note: This is work in progress, it will be improved overtime.
 * cd kafka-docker 
 * docker-compose up -d --build
 
+## Useful Kafka commands
+* List topics  - docker-compose exec broker kafka-topics --zookeeper zookeeper:2181 --list
+* Create topic  - docker-compose exec broker kafka-topics --create --zookeeper \
+                  zookeeper:2181 --replication-factor 1 --partitions 1 --topic users
+
+## Useful docker commands
+* sh mode - docker-compose exec broker sh
+* run commands example : kafka-topics --zookeeper zookeeper:2181 --list
+
+
 ## Useful Links: ##
 * Kafka-connectors https://www.baeldung.com/kafka-connectors-guide
 * Kafka-connect https://data-flair.training/blogs/kafka-connect/amp/
