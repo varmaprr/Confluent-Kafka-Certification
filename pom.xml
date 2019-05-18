@@ -14,6 +14,7 @@
     <!-- sub modules -->
     <modules>
         <module>kafka-producer</module>
+        <module>kafka-schema-registry</module>
     </modules>
 
 </project>
