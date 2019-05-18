@@ -9,8 +9,10 @@ Note: This is work in progress, it will be improved overtime.
 * install git
 * install docker
 * install docker-compose
-* git clone https://github.com/varmaprr/confluent-kafka-certification.git
-* cd kafka-docker 
+* git clone https://github.com/confluentinc/cp-docker-images
+* cd cp-docker-images
+* git checkout 5.2.1-post
+* cd examples/cp-all-in-one/
 * docker-compose up -d --build
 
 ## Useful Kafka commands
@@ -19,6 +21,7 @@ Note: This is work in progress, it will be improved overtime.
                   zookeeper:2181 --replication-factor 1 --partitions 1 --topic users
 
 ## Useful docker commands
+* bash interactive mode - docker exec -it broker /bin/bash
 * sh mode - docker-compose exec broker sh
 * run commands example : kafka-topics --zookeeper zookeeper:2181 --list
 
@@ -32,6 +35,7 @@ Note: This is work in progress, it will be improved overtime.
 * Kafka-streams https://www.confluent.io/stream-processing-cookbook/
 * Kafka-streams https://docs.confluent.io/current/streams/index.html
 * KSQL https://docs.confluent.io/current/ksql/docs/faq.html
+* KSQL https://docs.confluent.io/current/ksql/docs/tutorials/index.html
 * Kafka Security https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf
 * Kafka-rest https://docs.confluent.io/current/kafka-rest/index.html
 * kafka-rest https://docs.confluent.io/current/kafka-rest/docs/index.html
