@@ -2,9 +2,12 @@ package com.varma.kafka;
 
 import io.confluent.common.utils.MockTime;
 import io.confluent.common.utils.Time;
+import kafka.admin.AdminUtils;
+import kafka.admin.RackAwareMode;
 import kafka.server.KafkaConfig;
 import kafka.server.KafkaServer;
 import kafka.utils.TestUtils;
+import kafka.utils.ZKStringSerializer$;
 import kafka.utils.ZkUtils;
 import kafka.zk.EmbeddedZookeeper;
 import org.I0Itec.zkclient.ZkClient;
@@ -21,7 +24,7 @@ public class CustomKafkaProducerTest {
 
     @Test
     public void testProducer(){
-        EmbeddedZookeeper zkServer = new EmbeddedZookeeper();
+       /* EmbeddedZookeeper zkServer = new EmbeddedZookeeper();
         String zkConnect = ZKHOST + ":" + zkServer.port();
         ZkClient zkClient = new ZkClient(zkConnect, 30000, 30000, ZKStringSerializer$.MODULE$);
         ZkUtils zkUtils = ZkUtils.apply(zkClient, false);
@@ -30,15 +33,15 @@ public class CustomKafkaProducerTest {
         Properties brokerProps = new Properties();
         brokerProps.setProperty("zookeeper.connect", zkConnect);
         brokerProps.setProperty("broker.id", "0");
-        brokerProps.setProperty("log.dirs", Files.createTempDirectory("kafka-").toAbsolutePath().toString());
+       // brokerProps.setProperty("log.dirs", Files.createTempDirectory("kafka-").toAbsolutePath().toString());
         brokerProps.setProperty("listeners", "PLAINTEXT://" + BROKERHOST +":" + BROKERPORT);
         brokerProps.setProperty("offsets.topic.replication.factor" , "1");
         KafkaConfig config = new KafkaConfig(brokerProps);
-        Time mock = new MockTime();
-        KafkaServer kafkaServer = TestUtils.createServer(config, mock);
+       *//* Time mock = new MockTime();
+        KafkaServer kafkaServer = TestUtils.createServer(config, mock);*//*
 
         // create topic
-        AdminUtils.createTopic(zkUtils, TOPIC, 1, 1, new Properties(), RackAwareMode.Disabled$.MODULE$);
+        AdminUtils.createTopic(zkUtils, TOPIC, 1, 1, new Properties(), RackAwareMode.Disabled$.MODULE$);*/
     }
 
 }

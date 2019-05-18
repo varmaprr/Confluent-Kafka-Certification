@@ -1,16 +1,16 @@
 package com.varma.kafka;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.kafka.clients.producer.RecordMetadata;
-
-import java.net.InetAddress;
-import java.util.Properties;
-import java.util.concurrent.Future;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Producer {
+
+    private static Logger LOGGER = LoggerFactory.getLogger(Producer.class);
+
     public static void main(String[] args) throws Exception {
+        LOGGER.info("Running kafka producer...");
         CustomKafkaProducer customKafkaProducer = new CustomKafkaProducer();
-        customKafkaProducer.produce("sample-topic",null, "This is a sample message");
+        customKafkaProducer.produce("sample-topic","1", "This is a sample message");
+        LOGGER.info("Running kafka producer completed!! ");
     }
 }

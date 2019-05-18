@@ -1,9 +1,10 @@
 package com.varma.kafka;
 
+import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
+import org.apache.kafka.common.serialization.StringSerializer;
 
-import java.net.InetAddress;
 import java.util.Properties;
 import java.util.concurrent.Future;
 
@@ -20,8 +21,10 @@ public class CustomKafkaProducer {
     private Properties getProperties(){
         Properties config = new Properties();
         config.put("client.id", "sample-client-id");
-        config.put("bootstrap.servers", "host1:9092,host2:9092");
+        config.put("bootstrap.servers", "13.233.142.162:9092,13.233.142.162:29092");
         config.put("acks", "all");
+        config.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        config.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         return config;
     }
 
