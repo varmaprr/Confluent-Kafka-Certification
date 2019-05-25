@@ -10,7 +10,7 @@
 **Modes to run kafka connect server**
 
 * Standalone mode
-* Distributed mode - recommended to use production.
+* Distributed mode - recommended for production use.
 
 **What is standalone Mode**
 
@@ -27,7 +27,8 @@
 * useful for production deployment of connectors.
 
 **java memory property to control java heap size**
+
 export KAFKA_HEAP_OPTS="-Xms256M -Xmx2G"
 https://stackoverflow.com/questions/50621962/how-to-set-kafka-connect-connector-and-tasks-jvm-heap-size
 
-**What is a task and how connector will break them in to tasks?**
+**What is a task and how connector will break them into tasks?**
