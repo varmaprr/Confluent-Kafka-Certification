@@ -2,6 +2,8 @@
 
 ## Key points
 
+** When will a produced message will be ready consumer? **
+
 Messages written to the partition leader are not immediately readable by consumers regardless of the producer's acknowledgement settings.
 When all in-sync replicas have acknowledged the write, then the message is considered committed, which makes it available for reading.
 This ensures that messages cannot be lost by a broker failure after they have already been read.
