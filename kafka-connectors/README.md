@@ -36,5 +36,8 @@
     No of parallel
 
 **What is task.maxs property?**
-    
+
     Defined the no of tasks that we want to run in parallel.
+    For source connector we usually keep it 1(one).
+    For sink connectors this property will be set to higher?
+
