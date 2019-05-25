@@ -28,7 +28,13 @@
 
 **java memory property to control java heap size**
 
-export KAFKA_HEAP_OPTS="-Xms256M -Xmx2G"
-https://stackoverflow.com/questions/50621962/how-to-set-kafka-connect-connector-and-tasks-jvm-heap-size
+    export KAFKA_HEAP_OPTS="-Xms256M -Xmx2G"
+    https://stackoverflow.com/questions/50621962/how-to-set-kafka-connect-connector-and-tasks-jvm-heap-size
 
 **What is a task and how connector will break them into tasks?**
+
+    No of parallel
+
+**What is task.maxs property?**
+    
+    Defined the no of tasks that we want to run in parallel.
