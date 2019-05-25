@@ -36,6 +36,7 @@ Note: This is work in progress, it will be improved overtime.
 * Kafka-streams https://docs.confluent.io/current/streams/index.html
 * KSQL https://docs.confluent.io/current/ksql/docs/faq.html
 * KSQL https://docs.confluent.io/current/ksql/docs/tutorials/index.html
+* KSQL https://www.michael-noll.com/blog/2018/04/05/of-stream-and-tables-in-kafka-and-stream-processing-part1/
 * Kafka Security https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf
 * Kafka-rest https://docs.confluent.io/current/kafka-rest/index.html
 * kafka-rest https://docs.confluent.io/current/kafka-rest/docs/index.html
