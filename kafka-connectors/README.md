@@ -30,4 +30,4 @@
 export KAFKA_HEAP_OPTS="-Xms256M -Xmx2G"
 https://stackoverflow.com/questions/50621962/how-to-set-kafka-connect-connector-and-tasks-jvm-heap-size
 
-**What is a task?**
+**What is a task and how connector will break them in to tasks?**
