@@ -26,4 +26,8 @@
 * Easy to scale and fault tolerant(rebalance in case a worker dies)
 * useful for production deployment of connectors.
 
+**java memory property to control java heap size**
+export KAFKA_HEAP_OPTS="-Xms256M -Xmx2G"
+https://stackoverflow.com/questions/50621962/how-to-set-kafka-connect-connector-and-tasks-jvm-heap-size
+
 **What is a task?**
