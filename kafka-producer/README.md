@@ -12,7 +12,7 @@ This ensures that messages cannot be lost by a broker failure after they have al
 
     key configurations are explined here : https://docs.confluent.io/current/clients/producer.html
 
-**explain bootstrap.servers**
+**Explain bootstrap.servers**
 
     bootstrap.servers property so that the producer can find the Kafka cluster.
 
