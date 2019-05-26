@@ -173,9 +173,11 @@ Note: This is work in progress, it will be improved overtime.
     If you are managing topic creation explicitly, whether manually or through a provisioning system, you can set the auto.create.topics.enable configuration to false.
 
 **num.partitions**
+
     default is 1
 
 **log.retention.ms**
+
     The most common configuration for how long Kafka will retain messages is by time.
     The default is specified in the configuration file using the log.retention.hours
     parameter, and it is set to 168 hours, or one week. However, there are two other
@@ -185,6 +187,35 @@ Note: This is work in progress, it will be improved overtime.
     smaller unit size will take precedence if more than one is specified. This will make
     sure that the value set for log.retention.ms is always the one used. If more than one
     is specified, the smaller unit size will take precedence.
+
+**log.retention.bytes**
+
+    This property will define the amount of data retainied per partition, if the topic has 8 partition then data retained per topic would be 8GB.
+    if both the log.retention.ms and log.retention.bytes are configured, messages may be removed when either criteria is met.
+
+**log.segment.bytes**
+
+    Once the log segment has reached the size specified by the log.segment.bytes parameter, which defaults to 1 GB, the log segment is closed and a new one is opened.
+    Once a log segment has been closed, it can be considered for expiration.
+
+**log.segment.ms**
+
+    Specifies the amount of time after which a log segment should be closed.
+    Kafka will close a log segment either when the size limit is reached or when the time limit is reached, whichever comes first.
+    By default, there is no setting for log.segment.ms, which results in only closing log segments by size.
+
+**message.max.bytes**
+
+    message.max.bytes parameter, which defaults to 1000000, or 1 MB.
+    This configuration deals with compressed message size, actual uncompressed message can be larger then it.
+
+    There are noticeable performance impacts from increasing the allowable message size.
+    Larger messages will mean that the broker threads that deal with processing network connections and requests will be working longer on each request.
+    Larger messages also increase the size of disk writes, which will impact I/O throughput.
+
+**fetch.message.max.bytes**
+
+    If this value is smaller than message.max.bytes, then consumers that encounter larger messages will fail to fetch those messages, resulting in a situation where the consumer gets stuck and cannot proceed.
 
 ## Kafka producer ##
 [README.md](kafka-producer/README.md)
