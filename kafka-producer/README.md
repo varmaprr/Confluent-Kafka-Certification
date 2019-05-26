@@ -24,42 +24,42 @@
 
     https://docs.confluent.io/current/installation/configuration/producer-configs.html#cp-config-producer
 
-**How produced messages are sent to kafka server?
+**How produced messages are sent to kafka server?**
 
-**What is a batch?
+**What is a batch?**
 
     A batch is just a collection of messages, all of which are being produced to the same topic and partition.
     Batches are also typically compressed, providing more efficient data transfer and storage at the cost of some processing power
 
-**What is the controller?
+**What is the controller?**
 
     Within a cluster of brokers, one broker will also function as the cluster controller (elected automatically from the live members of the cluster).
     The controller is responsible for administrative operations, including assigning partitions to brokers and monitoring for broker failures.
 
-**What is a leader?
+**What is a leader?**
 
     A partition is owned by a single broker in the cluster, and that broker is called the leader of the partition.
     A partition may be assigned to multiple brokers, which will result in the partition being replicated (as seen in Figure 1-7).
     This provides redundancy of messages in the partition, such that another broker can take over leadership if there is a broker failure
 
-**What is retension?
+**What is retension?**
 
     Kafka brokers are configured with a default retention setting for topics, either retaining messages for some period of time (e.g., 7 days) or until the topic reaches a certain size in bytes (e.g., 1 GB).
     Once these limits are reached, messages are expired and deleted so that the retention configuration is a minimum amount of data available at any time.
 
-**What is log compaction?
+**What is log compaction?**
 
     Topics can also be configured as log compacted, which means that Kafka will retain only the last message produced with a specific key.
     This can be useful for changelog-type data, where only the last update is interesting.
 
-**What is ensemble?
+**What is ensemble?**
 
     A Zookeeper cluster is called an ensemble.
     Due to the algorithm used, it is recommended that ensembles contain an odd number of servers (e.g., 3, 5, etc.) as a majority of ensemble members (a quorum) must be working in order for Zookeeper to respond to requests.
     This means that in a three-node ensemble, you can run with one node missing.
     With a five-node ensemble, you can run with two nodes missing.
 
-** Ensemble configuration?
+**Ensemble configuration?**
 
     Example:
     tickTime=2000
