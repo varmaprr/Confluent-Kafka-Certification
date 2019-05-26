@@ -153,6 +153,7 @@ Note: This is work in progress, it will be improved overtime.
     Note that the broker will place a new partition in the path that has the least number of partitions currently stored in it, not the least amount of disk space used.
 
 **num.recovery.threads.per.data.dir**
+
     Kafka uses a configurable pool of threads for handling log segments. Currently, this thread pool is used:
         • When starting normally, to open each partition’s log segments
         • When starting after a failure, to check and truncate each partition’s log segments
@@ -161,6 +162,29 @@ Note: This is work in progress, it will be improved overtime.
      As these threads are only used during startup and shutdown, it is reasonable to set a larger number of threads in order to parallelize operations.
      Specifically, when recovering from an unclean shutdown, this can mean the difference of several hours when restarting a broker with a large number of partitions! When setting this parameter, remember that the number configured is per log directory specified with log.dirs.
      This means that if num.recovery.threads.per.data.dir is set to 8, and there are 3 paths specified in log.dirs, this is a total of 24 threads.
+
+**auto.create.topics.enable**
+
+    The default Kafka configuration specifies that the broker should automatically create a topic under the following circumstances:
+        • When a producer starts writing messages to the topic
+        • When a consumer starts reading messages from the topic
+        • When any client requests metadata for the topic
+    In many situations, this can be undesirable behavior, especially as there is no way to validate the existence of a topic through the Kafka protocol without causing it to be created.
+    If you are managing topic creation explicitly, whether manually or through a provisioning system, you can set the auto.create.topics.enable configuration to false.
+
+**num.partitions**
+    default is 1
+
+**log.retention.ms**
+    The most common configuration for how long Kafka will retain messages is by time.
+    The default is specified in the configuration file using the log.retention.hours
+    parameter, and it is set to 168 hours, or one week. However, there are two other
+    parameters allowed, log.retention.minutes and log.retention.ms. All three of
+    these specify the same configuration—the amount of time after which messages may
+    be deleted—but the recommended parameter to use is log.retention.ms, as the
+    smaller unit size will take precedence if more than one is specified. This will make
+    sure that the value set for log.retention.ms is always the one used. If more than one
+    is specified, the smaller unit size will take precedence.
 
 ## Kafka producer ##
 [README.md](kafka-producer/README.md)
