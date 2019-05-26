@@ -33,7 +33,6 @@
 
 **What is a task and how connector will break them into tasks?**
 
-    No of parallel
 
 **What is task.maxs property?**
 
