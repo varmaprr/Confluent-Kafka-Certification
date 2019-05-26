@@ -81,3 +81,11 @@ Note: This is work in progress, it will be improved overtime.
 ## Kafka-control-center ##
 
 ## Kafka-security ##
+
+
+## Architecture and Adavanced Concepts ##
+
+* Exactly once semantics : https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/
+
+## realtime use-cases ##
+

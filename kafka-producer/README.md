@@ -25,3 +25,4 @@
     https://docs.confluent.io/current/installation/configuration/producer-configs.html#cp-config-producer
 
 
+unclean.leader.election.enable
