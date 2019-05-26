@@ -25,8 +25,11 @@ Note: This is work in progress, it will be improved overtime.
 * sh mode - docker-compose exec broker sh
 * run commands example : kafka-topics --zookeeper zookeeper:2181 --list
 
+## Books ##
 
-## Useful Links: ##
+Kafka: The Definitive Guide
+
+## Links: ##
 * Kafka-rest https://docs.confluent.io/current/kafka-rest/index.html
 * kafka-rest https://docs.confluent.io/current/kafka-rest/docs/index.html
 * kafka-rest https://docs.confluent.io/current/kafka-rest/quickstart.html
@@ -216,6 +219,17 @@ Note: This is work in progress, it will be improved overtime.
 **fetch.message.max.bytes**
 
     If this value is smaller than message.max.bytes, then consumers that encounter larger messages will fail to fetch those messages, resulting in a situation where the consumer gets stuck and cannot proceed.
+
+
+**Memory**
+
+    Most of the cases, consumer is caught up and lagging behind the producers very little. consumer will read are from system page cache resulting in faster reads.
+    Having more memory avilable to the system for page cache will improve the performance of consumer clients.
+    Kafka itself does not need much heap memory configured for the Java Virtual Machine (JVM). Even a broker that is handling X messages per second and a data rate of X megabits per second can run with a 5 GB heap.
+
+CPU
+    CPU power is mainly utilized for compressing messages from disc and recompress the message batch in order to store in disc.
+
 
 ## Kafka producer ##
 [README.md](kafka-producer/README.md)
