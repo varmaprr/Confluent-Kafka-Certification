@@ -46,6 +46,7 @@
     If acks=1, the producer will receive a success response from the broker the moment the leader replica received the message
                 If the client uses callbacks, latency will be hidden, but throughput will be limited by the number of in-flight messages (i.e., how many messages the producer will send before receiving replies from the server).
     If acks=all, the producer will receive a success response from the broker once all in-sync replicas received the message.
+                if acks is set to all, the request will be stored in a buffer called purgatory until the leader observes that the follower replicas replicated the message, at which point a response is sent to the client
 
 **buffer.memory**
 

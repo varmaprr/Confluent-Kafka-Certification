@@ -85,6 +85,16 @@ Kafka: The Definitive Guide
     A partition may be assigned to multiple brokers, which will result in the partition being replicated (as seen in Figure 1-7).
     This provides redundancy of messages in the partition, such that another broker can take over leadership if there is a broker failure
 
+**Types of replica**
+
+    Leader replica
+    follower replica
+    prefered replica
+    insync replicas Only in-sync replicas are eligible to be elected as partition leaders in case the existing leader fails.
+    out of sync : If a replica hasn’t requested a message in more than 10 seconds or if it has requested messages but hasn’t caught up to the most recent message in more than 10 seconds, the replica is considered out of sync.
+    replica.lag.time.max.ms: The amount of time a follower can be inactive or behind before it is considered out of sync.
+    By default, Kafka is configured with auto.leader.rebalance.enable=true, which will check if the preferred leader replica is not the current leader but is in-sync and trigger leader election to make the preferred leader the current leader.
+
 **What is retension?**
 
     Kafka brokers are configured with a default retention setting for topics, either retaining messages for some period of time (e.g., 7 days) or until the topic reaches a certain size in bytes (e.g., 1 GB).
@@ -97,12 +107,24 @@ Kafka: The Definitive Guide
 
 ## Zookeeper ##
 
+**What is the role of zookeeper in kafka**
+
+    zookeeper maintains the list of brokers, brokers info is stored in zookeeper under /brokers/ids
+
+***Emphemeral node**
+
+    Every time a broker process starts, it registers itself with its ID in Zookeeper by creating an ephemeral node.
+    When a broker loses connectivity to Zookeeper, the ephemeral node that the broker created when starting will be automatically removed from Zookeeper.
+    Even though the node representing the broker is gone when the broker is stopped, the broker ID still exists in other data structures. For example, the list of replicas of each topic contains the broker IDs for the replica.
+    This way, if you completely lose a broker and start a brand new broker with the ID of the old one, it will immediately join the cluster in place of the missing broker with the same partitions and topics assigned to it.
+
 **What is ensemble?**
 
     A Zookeeper cluster is called an ensemble.
     Due to the algorithm used, it is recommended that ensembles contain an odd number of servers (e.g., 3, 5, etc.) as a majority of ensemble members (a quorum) must be working in order for Zookeeper to respond to requests.
     This means that in a three-node ensemble, you can run with one node missing.
     With a five-node ensemble, you can run with two nodes missing.
+
 
 **Ensemble configuration?**
 
@@ -230,6 +252,58 @@ Kafka: The Definitive Guide
 CPU
     CPU power is mainly utilized for compressing messages from disc and recompress the message batch in order to store in disc.
 
+**Request processing:**
+
+   client request --> broker --> partitions leaders --> reponse --> broker --> client
+    All requests sent to the broker from a specific client will be processed in the order in which they were received—this guarantee is what allows Kafka to behave as a message queue and provide ordering guarantees on the messages it stores.
+
+**Request header**
+
+    request type
+    request version
+    correlation id
+    client id
+
+**client cache topic metadata**
+
+    client request for the metadata (request type: metadata request, which includes a list of topics the client is interested in).
+    metadata containts which partitions exist in the topics, the replicas for each partition, and which replica is the leader
+    all brokers caches the metadata informations.
+    metadata.max.age.ms defines the time to refresh the medadata in client.
+    if a client receives "not a leader", it will refresh metadata before retrying.
+
+**where does kafka writes the produced messages**
+
+    On Linux, the messages are written to the filesystem cache and there is no guarantee about when they will be written to disk.
+    Kafka does not wait for the data to get persisted to disk—it relies on replication for message durability.
+
+**what are segments**
+
+    partitions are further divided into segments, default size of segment is either 1 GB of data or a week of data.
+    currently writting segments is called active segment. active segment will never be deleted even the retension is passed.
+    Kafka broker will keep an open file handle to every segment in every partition—even inactive segments. This leads to an usually high number of open file handles, and the OS must be tuned accordingly.
+
+**message additional infor**
+
+    Each message contains—in addition to its key, value, and offset—things like the message size, checksum code that allows us to detect corruption, magic byte that indicates the version of the message format, compression codec (Snappy, GZip, or LZ4), and a timestamp (added in release 0.10.0). The timestamp is given either by the producer when the message was sent or by the broker when the message arrived—depending on configuration.
+
+**Indexes**
+
+    Kafka maintains indexes for each partition, indexes maps offsets to segment files and position within the file.
+
+**compaction**
+
+Policies:
+    delete --> delete events older then retension time.
+    compact --> keeps only the recent version of a particular key.
+
+**How compactions works**
+
+    clean
+    dirty
+    Deleted events --> producer will send a mesasge with key and value as null.
+
+    Compact policy will never delete a compact messages in current segment.
 
 ## Kafka producer ##
 [README.md](kafka-producer/README.md)
