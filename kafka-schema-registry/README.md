@@ -19,3 +19,10 @@ kafka-avro-console-producer \
  --bootstrap-server broker:29092 \
  --from-beginning
 
+**where does kafka stores schema?**
+
+    _schema topic
+
+**When deserialize a message if schema is not avilable in cache**
+
+     schema will be fetched from schema registry.

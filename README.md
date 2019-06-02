@@ -305,6 +305,14 @@ Policies:
 
     Compact policy will never delete a compact messages in current segment.
 
+**Where does kafka stores dynamic per broker configurations?**
+
+    zookeeper.
+
+**Where does dynamic cluster-wide default configs stored?**
+
+    zookeeper.
+
 ## Kafka producer ##
 [README.md](kafka-producer/README.md)
 ## Kafka consummer ##

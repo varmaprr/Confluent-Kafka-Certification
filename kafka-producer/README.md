@@ -114,4 +114,14 @@
 
     https://docs.confluent.io/current/installation/configuration/producer-configs.html#cp-config-producer
 
-unclean.leader.election.enable
+**unclean.leader.election.enable**
+
+    default value is true, this will allow out of sync replicas to become leaders.
+    This should be disable in critical applications like banking system managing transactions.
+
+**min.insync.replicas**
+
+    This will ensure the minumm number of replicas are in sync.
+    NotEnoughReplicasException will be throw to producer when the in sync replicas are less then what is configured.
+
+
