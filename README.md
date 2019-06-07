@@ -71,10 +71,10 @@ Kafka: The Definitive Guide
 
 **What is a batch?**
 
-    A batch is just a collection of messages, all of which are being produced to the same topic and partition.
-    Batches are also typically compressed, providing more efficient data transfer and storage at the cost of some processing power
+A batch is just a collection of messages, all of which are being produced to the same topic and partition.
+Batches are also typically compressed, providing more efficient data transfer and storage at the cost of some processing power
 
-**What is the controller?**
+**What is the role of a controller?**
 
     Within a cluster of brokers, one broker will also function as the cluster controller (elected automatically from the live members of the cluster).
     The controller is responsible for administrative operations, including assigning partitions to brokers and monitoring for broker failures.
@@ -297,7 +297,7 @@ Policies:
     delete --> delete events older then retension time.
     compact --> keeps only the recent version of a particular key.
 
-**How compactions works**
+**How compactions works?**
 
     clean
     dirty
@@ -332,7 +332,6 @@ Policies:
 ## Kafka-control-center ##
 
 ## Kafka-security ##
-
 
 ## Architecture and Adavanced Concepts ##
 
