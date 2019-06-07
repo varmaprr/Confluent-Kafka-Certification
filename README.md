@@ -71,8 +71,8 @@ Kafka: The Definitive Guide
 
 **What is a batch?**
 
-A batch is just a collection of messages, all of which are being produced to the same topic and partition.
-Batches are also typically compressed, providing more efficient data transfer and storage at the cost of some processing power
+    A batch is just a collection of messages, all of which are being produced to the same topic and partition.
+    Batches are also typically compressed, providing more efficient data transfer and storage at the cost of some processing power
 
 **What is the role of a controller?**
 
