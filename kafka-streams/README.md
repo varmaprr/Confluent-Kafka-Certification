@@ -15,3 +15,5 @@
 
     repartitioning topics
     changelog topics
+
+**What is state store?**
