@@ -2,7 +2,12 @@
 
 This repos is to keep all the relevant informations related for confluent-kafka-certification (CCDAK).
 
-Note: This is work in progress, it will be improved overtime. 
+Note: This is work in progress, it will be improved overtime.
+
+## Alternate links for preparation ##
+
+ http://lahotisolutions.blogspot.com/2019/03/apache-kafka-notes.html
+ https://www.quora.com/How-do-I-prepare-for-Kafka-certification-confluent-1
 
 ## How to run confluent kafka in AWS ##
 * Create an ec2 instance
