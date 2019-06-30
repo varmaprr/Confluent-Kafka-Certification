@@ -31,7 +31,6 @@ Note: This is work in progress, it will be improved overtime.
 * run commands example : kafka-topics --zookeeper zookeeper:2181 --list
 
 ## Books ##
-
 Kafka: The Definitive Guide
 
 ## Links: ##
