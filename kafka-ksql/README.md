@@ -58,3 +58,6 @@
 
     create stream user_profile_pretty as select firstname || ' ' || ucase( lastname) || ' from ' || countrycode || ' has a rating of ' || cast(rating as varchar) || ' stars. ' || case when rating < 2.5 then 'Poor' when rating between 2.5 and 4.2 then 'Good'else 'Excellent'end as description from userprofile;
 
+**How to set infinite retention in kafka**
+    
+    The kafka topic underpinning the static reference table can have infinite retention (log.retention.hours set to -1). That way the data will "always" be there for a join

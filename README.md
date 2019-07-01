@@ -4,34 +4,26 @@ This repos is to keep all the relevant informations related for confluent-kafka-
 
 Note: This is work in progress, it will be improved overtime.
 
+## Sources ##
+
+    * confluent documentation https://docs.confluent.io/current/
+    * apache documentation https://kafka.apache.org/documentation/
+    * Kafka definitive guide
+
 ## Alternate links for preparation ##
 
  http://lahotisolutions.blogspot.com/2019/03/apache-kafka-notes.html
  https://www.quora.com/How-do-I-prepare-for-Kafka-certification-confluent-1
 
-## How to run confluent kafka in AWS ##
-* Create an ec2 instance
-* install git
-* install docker
-* install docker-compose
-* git clone https://github.com/confluentinc/cp-docker-images
-* cd cp-docker-images
-* git checkout 5.2.1-post
-* cd examples/cp-all-in-one/
-* docker-compose up -d --build
-
-## Useful Kafka commands
-* List topics  - docker-compose exec broker kafka-topics --zookeeper zookeeper:2181 --list
-* Create topic  - docker-compose exec broker kafka-topics --create --zookeeper \
-                  zookeeper:2181 --replication-factor 1 --partitions 1 --topic users
-
-## Useful docker commands
-* bash interactive mode - docker exec -it broker /bin/bash
-* sh mode - docker-compose exec broker sh
-* run commands example : kafka-topics --zookeeper zookeeper:2181 --list
-
-## Books ##
-Kafka: The Definitive Guide
+| description | Description |
+| ---------------- | --------------------------------------- |
+| setup & commands | [README.md](./SETUP-COMMANDS-README.md) |
+| Kafka producer | [README.md](kafka-producer/README.md) |
+| Kafka consummer | [README.md](kafka-consumer/README.md) |
+| Kakfa Connectors | [README.md](kafka-connectors/README.md) |
+| Kakfa schema-registry | [README.md](kafka-schema-registry/README.md) |
+| Kakfa Streams | [README.md](kafka-streams/README.md) |
+| Kakfa KSQL | [README.md](kafka-ksql/README.md) |
 
 ## Links: ##
 * Kafka-rest https://docs.confluent.io/current/kafka-rest/index.html
