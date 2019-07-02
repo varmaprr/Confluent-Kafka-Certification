@@ -66,16 +66,25 @@ kafka-avro-console-producer \
 
 **What are type of compatibility schema registry supports and how?**
 
-    FORWARD
+ These are the compatibility types:
+     BACKWARD: (default) consumers using the new schema can read data written by producers using the latest registered schema
+     BACKWARD_TRANSITIVE: consumers using the new schema can read data written by producers using all previously registered schemas
+     FORWARD: consumers using the latest registered schema can read data written by producers using the new schema
+     FORWARD_TRANSITIVE: consumers using all previously registered schemas can read data written by producers using the new schema
+     FULL: the new schema is forward and backward compatible with the latest registered schema
+     FULL_TRANSITIVE: the new schema is forward and backward compatible with all previously registered schemas
+     NONE: schema compatibility checks are disabled
+
+**what is the default compatibility type**
+
     BACKWARD
-    FULL
-
-**What is fully compatable schema?**
-
-**What is Forward compatable schema?**
-
-**What is Backward compatable schema?**
 
 **will a custom pojo can be auto registered in register schema?**
 
     No, this has to be handled explicitly and you need to modify your class similar to auto generate class by maven plugin.
+
+**How to disable auto schema registry?**
+
+    client applications automatically register new schemas. This is very convenient in development environments, but in production environments we recommend that client applications do not automatically register new schemas.
+    props.put(AbstractKafkaAvroSerDeConfig.AUTO_REGISTER_SCHEMAS, false);
+    

@@ -68,6 +68,12 @@
     default is true.
     If you set enable.auto.commit to true, then you might also want to control how frequently offsets will be committed using auto.commit.interval.ms.
 
+**What are the various partitions assignment strategies?**
+    
+    org.apache.kafka.clients.consumer.RangeAssignor -> This is default option
+    org.apache.kafka.clients.consumer.RoundRobinAssignor -> recommend when multi topics are consumered together.
+    more details are here: https://medium.com/@anyili0928/what-i-have-learned-from-kafka-partition-assignment-strategy-799fdf15d3ab 
+
 **partition.assignment.strategy**
 
     * Range : default
@@ -103,3 +109,5 @@
 
     ConsumerRebalanceListener onPartitionsRevoked(Collection<TopicPartition> partitions) and onPartitionsRevoked(Collection<TopicPartition> partitions).
     consumer.subscribe(topics, new HandleRebalanceCsutomListener());
+    
+    

@@ -69,9 +69,13 @@ Note: This is work in progress, it will be improved overtime.
 * kafka-streams - By Tim berglund https://youtu.be/7JYEEx7SBuE
 * kafka-streams - By Tim berglund https://youtu.be/3kJgYIkAeHs
 
-## Architecture and Adavanced Concepts ##
+## Architecture and Advanced Concepts ##
 
 * Exactly once semantics : https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/
+* Kafka partition https://medium.com/@anyili0928/what-i-have-learned-from-kafka-partition-assignment-strategy-799fdf15d3ab
+* kafka stateful DSL : https://kafka.apache.org/20/documentation/streams/developer-guide/dsl-api.html#stateful-transformations
 
-## realtime use-cases ##
+## Real-time use-cases & Blog's ##
 
+* https://www.confluent.io/stream-processing-cookbook/
+* https://www.confluent.io/blog/
