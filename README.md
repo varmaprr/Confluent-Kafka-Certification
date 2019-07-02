@@ -22,22 +22,22 @@ Note: This is work in progress, it will be improved overtime.
 
 ## Links: ##
 
-* Kafka-rest [https://docs.confluent.io/current/kafka-rest/index.html]()
-* kafka-rest [https://docs.confluent.io/current/kafka-rest/docs/index.html]()
-* kafka-rest [https://docs.confluent.io/current/kafka-rest/quickstart.html]()
-* schema registry [https://docs.confluent.io/current/schema-registry/schema_registry_tutorial.html]()
-* Kafka-connectors [https://www.baeldung.com/kafka-connectors-guide]()
-* Kafka-connect [https://data-flair.training/blogs/kafka-connect/amp/]()
-* Kafka-connect-avro [https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html]()
-* kafka-connect [https://www.confluent.io/blog/simplest-useful-kafka-connect-data-pipeline-world-thereabouts-part-1/]()
-* kafka-connect [https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html]()
-* Kafka-streams [https://www.confluent.io/stream-processing-cookbook/]()
-* Kafka-streams [https://docs.confluent.io/current/streams/index.html]()
-* KSQL [https://docs.confluent.io/current/ksql/docs/faq.html]()
-* KSQL [https://docs.confluent.io/current/ksql/docs/tutorials/index.html]()
-* KSQL [https://www.michael-noll.com/blog/2018/04/05/of-stream-and-tables-in-kafka-and-stream-processing-part1/]()
-* Kafka Security [https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf]()
-* Kafka-control-center [https://docs.confluent.io/current/tutorials/cp-demo/docs/index.html]()
+* Kafka-rest [https://docs.confluent.io/current/kafka-rest/index.html](https://docs.confluent.io/current/kafka-rest/index.html)
+* kafka-rest [https://docs.confluent.io/current/kafka-rest/docs/index.html](https://docs.confluent.io/current/kafka-rest/docs/index.html)
+* kafka-rest [https://docs.confluent.io/current/kafka-rest/quickstart.html](https://docs.confluent.io/current/kafka-rest/quickstart.html)
+* schema registry [https://docs.confluent.io/current/schema-registry/schema_registry_tutorial.html](https://docs.confluent.io/current/schema-registry/schema_registry_tutorial.html)
+* Kafka-connectors [https://www.baeldung.com/kafka-connectors-guide](https://www.baeldung.com/kafka-connectors-guide)
+* Kafka-connect [https://data-flair.training/blogs/kafka-connect/amp/](https://data-flair.training/blogs/kafka-connect/amp/)
+* Kafka-connect-avro [https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html](https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html)
+* kafka-connect [https://www.confluent.io/blog/simplest-useful-kafka-connect-data-pipeline-world-thereabouts-part-1/](https://www.confluent.io/blog/simplest-useful-kafka-connect-data-pipeline-world-thereabouts-part-1/)
+* kafka-connect [https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html](https://docs.confluent.io/current/cp-docker-images/docs/tutorials/connect-avro-jdbc.html)
+* Kafka-streams [https://www.confluent.io/stream-processing-cookbook/](https://www.confluent.io/stream-processing-cookbook/)
+* Kafka-streams [https://docs.confluent.io/current/streams/index.html](https://docs.confluent.io/current/streams/index.html)
+* KSQL [https://docs.confluent.io/current/ksql/docs/faq.html](https://docs.confluent.io/current/ksql/docs/faq.html)
+* KSQL [https://docs.confluent.io/current/ksql/docs/tutorials/index.html](https://docs.confluent.io/current/ksql/docs/tutorials/index.html)
+* KSQL [https://www.michael-noll.com/blog/2018/04/05/of-stream-and-tables-in-kafka-and-stream-processing-part1/](https://www.michael-noll.com/blog/2018/04/05/of-stream-and-tables-in-kafka-and-stream-processing-part1/)
+* Kafka Security [https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf](https://medium.com/@stephane.maarek/introduction-to-apache-kafka-security-c8951d410adf)
+* Kafka-control-center [https://docs.confluent.io/current/tutorials/cp-demo/docs/index.html](https://docs.confluent.io/current/tutorials/cp-demo/docs/index.html)
 
 ## Video tutorials: ##
 
