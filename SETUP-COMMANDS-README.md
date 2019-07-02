@@ -1,4 +1,4 @@
-#Setup & Commamnds#
+# Setup & Commands #
 
 ## How to run confluent kafka in AWS ##
 ```
