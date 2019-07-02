@@ -3,14 +3,6 @@
 This repos is to keep all the relevant informations related for confluent-kafka-certification (CCDAK).
 Note: This is work in progress, it will be improved overtime.
 
-## Sources ##
-
-Content in this github is sourced from following locations
-
-* confluent documentation https://docs.confluent.io/current/
-* apache documentation https://kafka.apache.org/documentation/
-* Kafka definitive guide
-
 ## Contents ##
 
 | Description | Links |
@@ -23,10 +15,10 @@ Content in this github is sourced from following locations
 | Kakfa schema-registry | [README.md](kafka-schema-registry/README.md) |
 | Kakfa Streams | [README.md](kafka-streams/README.md) |
 | Kakfa KSQL | [README.md](kafka-ksql/README.md) |
-| Kafka-DSL | [README.md](kafka-ksql/README.md) |
-| Kakfa KSQL | [README.md](kafka-ksql/README.md) |
-| Kafka-control-center | [README.md](kafka-ksql/README.md) |
-| Kafka-security | [README.md](kafka-ksql/README.md) |
+| Kafka-DSL |  |
+| Kakfa KSQL |  |
+| Kafka-control-center |  |
+| Kafka-security |  |
 
 ## Links: ##
 
@@ -74,10 +66,17 @@ Content in this github is sourced from following locations
 
 ## Real-time use-cases & Blog's ##
 
-* https://www.confluent.io/stream-processing-cookbook/
-* https://www.confluent.io/blog/
+https://www.confluent.io/stream-processing-cookbook/
+https://www.confluent.io/blog/
 
 ## Alternate links for preparation ##
 
-* http://lahotisolutions.blogspot.com/2019/03/apache-kafka-notes.html
-* https://www.quora.com/How-do-I-prepare-for-Kafka-certification-confluent-1
+http://lahotisolutions.blogspot.com/2019/03/apache-kafka-notes.html
+https://www.quora.com/How-do-I-prepare-for-Kafka-certification-confluent-1
+
+## Sources ##
+Content in this github is sourced from following locations
+
+* [Confluent documentation](https://docs.confluent.io/current/)
+* [Apache documentation](https://kafka.apache.org/documentation/)
+* Kafka definitive guide Book
