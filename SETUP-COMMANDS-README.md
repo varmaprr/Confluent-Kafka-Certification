@@ -12,20 +12,17 @@
 8. cd examples/cp-all-in-one/
 9. docker-compose up -d --build
 ```
-## Useful Kafka commands
+## Linux command
 ```
-# List topics 
-    docker-compose exec broker kafka-topics --zookeeper zookeeper:2181 --list
-# Create topic 
-    docker-compose exec broker kafka-topics --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic users
+# List topics docker-compose exec broker kafka-topics --zookeeper zookeeper:2181 --list
+# Create topic docker-compose exec broker kafka-topics --create --zookeeper \
+    zookeeper:2181 --replication-factor 1 --partitions 1 --topic users
 ```
 
-## Useful docker commands
- 
+## Docker command
 ```
-    # docker command to run in bash or sh shell
-    
-        bash interactive mode - docker exec -it broker /bin/bash
-        sh mode - docker-compose exec broker sh
-        kafka-topics --zookeeper zookeeper:2181 --list
+# docker command to run in bash or sh shell
+    bash interactive mode - docker exec -it broker /bin/bash
+    sh mode - docker-compose exec broker sh
+    kafka-topics --zookeeper zookeeper:2181 --list
 ```
