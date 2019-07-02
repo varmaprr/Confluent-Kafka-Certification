@@ -5,14 +5,11 @@ Note: This is work in progress, it will be improved overtime.
 
 ## Sources ##
 
-    * confluent documentation https://docs.confluent.io/current/
-    * apache documentation https://kafka.apache.org/documentation/
-    * Kafka definitive guide
+Content in this github is sourced from following locations
 
-## Alternate links for preparation ##
-
-    http://lahotisolutions.blogspot.com/2019/03/apache-kafka-notes.html
-    https://www.quora.com/How-do-I-prepare-for-Kafka-certification-confluent-1
+* confluent documentation https://docs.confluent.io/current/
+* apache documentation https://kafka.apache.org/documentation/
+* Kafka definitive guide
 
 ## Contents ##
 
@@ -79,3 +76,8 @@ Note: This is work in progress, it will be improved overtime.
 
 * https://www.confluent.io/stream-processing-cookbook/
 * https://www.confluent.io/blog/
+
+## Alternate links for preparation ##
+
+* http://lahotisolutions.blogspot.com/2019/03/apache-kafka-notes.html
+* https://www.quora.com/How-do-I-prepare-for-Kafka-certification-confluent-1
