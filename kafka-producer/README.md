@@ -16,27 +16,27 @@
 
 **When will a produced message will be ready to consume?**
 
-    Messages written to the partition leader are not immediately readable by consumers regardless of the producer's acknowledgement settings.
+    Messages written to the partition leader are not immediately readable by consumers regardless of the producer's acknowledgment settings.
     When all in-sync replicas have acknowledged the write, then the message is considered committed, which makes it available for reading.
     This ensures that messages cannot be lost by a broker failure after they have already been read.
 
 **What are the producer key configuration?**
 
-    key configurations are explined here : https://docs.confluent.io/current/clients/producer.html
+    key configurations are explained here : https://docs.confluent.io/current/clients/producer.html
 
 **key.serializer**
 
     producer interface allows user to provide the key.serializer.
-    Avilable serializers: ByteArraySerializer, StringSerializer and IntegerSerializer.
+    Available serializers: ByteArraySerializer, StringSerializer and IntegerSerializer.
     setting key.serializer is required even if you intend to send only values.
 
 **value.serializer**
 
-    producer interface allows user to provide the key.serializer. like the same way as key.serializer.
+    producer interface allows the user to provide the value.serializer. like the same way as key.serializer.
 
 **retries**
 
-    Setting a value greater than zero will cause the client to resend any record whose send fails with a potentially transient error. Note that this retry is no different than if the client resent the record upon receiving the error. Allowing retries without setting max.in.flight.requests.per.connection to 1 will potentially change the ordering of records because if two batches are sent to a single partition, and the first fails and is retried but the second succeeds, then the records in the second batch may appear first. Note additionall that produce requests will be failed before the number of retries has been exhausted if the timeout configured by delivery.timeout.ms expires first before successful acknowledgement. Users should generally prefer to leave this config unset and instead use delivery.timeout.ms to control retry behavior.
+    Setting a value greater than zero will cause the client to resend any record whose send fails with a potentially transient error. Note that this retry is no different than if the client resents the record upon receiving the error. Allowing retries without setting max.in.flight.requests.per.connection to 1 will potentially change the ordering of records because if two batches are sent to a single partition, and the first fails and is retried but the second succeeds, then the records in the second batch may appear first. Note additionally that produce requests will be failed before the number of retries has been exhausted if the timeout configured by delivery.timeout.ms expires first before the successful acknowledgment. Users should generally prefer to leave this config unset and instead use delivery.timeout.ms to control retry behavior.
     default: 2147483647
     By default, the producer will wait 100ms between retries, but you can control this using the retry.backoff.ms parameter.
 
@@ -67,14 +67,14 @@
     linger.ms controls the amount of time to wait for additional messages before sending the current batch.
     KafkaProducer sends a batch of messages either when the current batch is full or when the linger.ms limit is reached.
     By default, the producer will send messages as soon as there is a sender thread available to send them, even if there’s just one message in the batch.
-    By setting linger.ms higher than 0, we instruct the producer to wait a few milliseconds to add additional messages to the batch  before sending it to the brokers.
+    By setting linger.ms higher than 0, we instruct the producer to wait a few milliseconds to add additional messages to the batch before sending it to the brokers.
     This increases latency but also increases throughput (because we send more messages at once, there is less overhead per message).
 
 **compression.type**
 
     By default, messages are sent uncompressed
     supported compression types: snappy, gzip and lz4.
-    snappy is recommended, with low CPU and good performance and decent comression ratio.
+    snappy is recommended, with low CPU and good performance and decent compression ratio.
     Gzip use more CPU and time, but result in better compression ratio.
 
 **max.in.flight.requests.per.connection**
@@ -86,7 +86,7 @@
 **Methods of sending messages**
 
     * Fire-and-forget :
-        We many loose data in this situation. Possbile cases of lossing data : SerializationException when it fails to serialize the message, a BufferExhaustedException or TimeoutException if the buffer is full, or an InterruptException if the sending thread was interrupted.
+        We may lose data in this situation. Possible cases of losing data: SerializationException when it fails to serialize the message, a BufferExhaustedException or TimeoutException if the buffer is full, or an InterruptException if the sending thread was interrupted.
         not recommended for production use.
     * Synchronous send
         We user Future.get() to wait for a reply from Kafka
@@ -110,18 +110,18 @@
     Although not required, you should always set a client.id since this allows you to easily correlate requests on the broker with the client instance which made it.
 
 
-**Where can i find the full list of configs documentation?**
+**Where can I find the full list of configs documentation?**
 
     https://docs.confluent.io/current/installation/configuration/producer-configs.html#cp-config-producer
 
 **unclean.leader.election.enable**
 
-    default value is true, this will allow out of sync replicas to become leaders.
-    This should be disable in critical applications like banking system managing transactions.
+    the default value is true, this will allow out of sync replicas to become leaders.
+    This should be disabled in critical applications like banking system managing transactions.
 
 **min.insync.replicas**
 
-    This will ensure the minumm number of replicas are in sync.
-    NotEnoughReplicasException will be throw to producer when the in sync replicas are less then what is configured.
+    This will ensure the minimum number of replicas are in sync.
+    NotEnoughReplicasException will be thrown to the producer when the in-sync replicas are less then what is configured.
 
 
