@@ -28,7 +28,7 @@
     replica.lag.time.max.ms: The amount of time a follower can be inactive or behind before it is considered out of sync.
     By default, Kafka is configured with auto.leader.rebalance.enable=true, which will check if the preferred leader replica is not the current leader but is in-sync and trigger leader election to make the preferred leader the current leader.
 
-**What is retension?**
+**What is retention?**
 
     Kafka brokers are configured with a default retention setting for topics, either retaining messages for some period of time (e.g., 7 days) or until the topic reaches a certain size in bytes (e.g., 1 GB).
     Once these limits are reached, messages are expired and deleted so that the retention configuration is a minimum amount of data available at any time.
