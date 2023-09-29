@@ -9,7 +9,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <version>1.0.0</version>
 
     <properties>
-        <avro.version>1.8.2</avro.version>
+        <avro.version>1.11.3</avro.version>
         <kafka.version>0.11.0.1-cp1</kafka.version>
         <confluent.version>3.3.1</confluent.version>
     </properties>
